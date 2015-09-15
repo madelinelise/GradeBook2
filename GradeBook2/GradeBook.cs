@@ -26,5 +26,33 @@ namespace GradeBook2
             Console.WriteLine("Welcome to the grade book for\n{0}!\n", courseName);
         } // end method DisplayMessage
 
+        public void DetermineClassAverage()
+        {
+            int total;
+            int gradeCounter;
+            int grade;
+            int average;
+
+            // initialization phase
+            total = 0; // intitalized the total
+            gradeCounter = 1; // initializaed the loop counter
+
+            while ( gradeCounter <= 10 )
+            {
+                Console.WriteLine("Enter Grade: ");
+                grade = Convert.ToInt32(Console.ReadLine());
+                total = total + grade;
+                gradeCounter = gradeCounter + 1;
+            } // end while
+
+            // termination phase
+            average = total / 10;
+
+            Console.WriteLine("\nTotal of all 10 grades is {0}", total);
+            Console.WriteLine("\nClass average of all 10 grades is {0}", average);
+
+            
+        } // end method DetermineClassAverage
+
     } // end Gradebook class
 }
